@@ -1,0 +1,2 @@
+Prefix plugins/MAST/example/
+Plugin MAST inputfile maits.rds outputfile output.pdf
