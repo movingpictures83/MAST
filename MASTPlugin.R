@@ -117,6 +117,7 @@ print(summaryCond, n=4, by='C')
 
 ## -----------------------------------------------------------------------------
 summaryDt <- summaryCond$datatable
+write.csv(summaryDt, paste(outputfile, "csv", sep="."))
 fcHurdle <- merge(summaryDt[contrast=='conditionStim' & component=='H',.(primerid, `Pr(>Chisq)`)], #hurdle P values
                       summaryDt[contrast=='conditionStim' & component=='logFC', .(primerid, coef, ci.hi, ci.lo)], by='primerid') #logFC coefficients
 
